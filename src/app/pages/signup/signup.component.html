@@ -1,0 +1,111 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img src="../../../assets/LogoKspace.jpg" alt=""/>
+                </div>
+
+                <h1 class="" style="margin-left: 50px;"> Inscrivez-vous maintenant </h1>
+
+                <!-- {{ user | json }} -->
+                
+                <form (ngSubmit)="formSubmit()">
+
+                    <!-- Champ pour nom d'utilisateur-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input
+                            required
+                            [(ngModel)]="user.username"
+                            name="username"
+                            matInput 
+                            placeholder="Entrer votre nom d'utilisateur"
+                        />
+                        <mat-hint>Le nom d'utilisateur doit être unique !</mat-hint>
+                    </mat-form-field>
+
+                    <!-- Champ pour nom -->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>FirstName</mat-label>
+                        <input
+                            required
+                            [(ngModel)]="user.firstName"
+                            name="firstName"
+                            matInput
+                            placeholder="Entrer votre nom"
+                        />
+                    </mat-form-field>
+
+                    <!-- Champ pour prénom-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>LastName</mat-label>
+                        <input
+                            required
+                            [(ngModel)]="user.lastName"
+                            name="lastName"
+                            matInput
+                            placeholder="Entrer votre prénom"
+                        />
+                    </mat-form-field>
+
+                    <!-- Champ pour email-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input
+                            required
+                            [(ngModel)]="user.email"
+                            name="email"
+                            matInput
+                            placeholder="Entrer votre email"
+                        />
+                    </mat-form-field>
+
+                    <!-- Champ pour mot de passe-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input
+                            required
+                            [(ngModel)]="user.password"
+                            name="password"
+                            type="password"
+                            matInput
+                            placeholder="Entrer votre mot de passe"
+                        />
+                    </mat-form-field>
+
+                    <!-- Champ pour numéro de téléphone-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Phone</mat-label>
+                        <input
+                            required
+                            [(ngModel)]="user.phone"
+                            name="phone"
+                            matInput
+                            placeholder="Entrer votre numéro de téléphone"
+                        />
+                    </mat-form-field>
+
+                    <!-- Champ pour photo de profil-->
+                    <mat-form-field class="full-width" appearance="outline">
+                        <mat-label>Profile</mat-label>
+                        <input
+                            required
+                            [(ngModel)]="user.profile"
+                            name="profile"
+                            matInput
+                            placeholder="Choisissez votre photo"
+                        />
+                    </mat-form-field>
+
+                    <!-- Button pour valider || annuler -->
+                    <div class="container text-center">
+                        <button type="submit" style="background-color: #45ABB6; color: white;" mat-raised-button>S'inscrire</button>
+                        <button style="margin-left: 20px; background-color: red; color: white;" mat-raised-button>Annuler</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
