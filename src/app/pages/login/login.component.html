@@ -1,7 +1,7 @@
 
 <div class="bootstrap-wrapper">
     <div class="container">
-        <div class="row">
+        <div class="row mt40">
             <div class="col-md-6 offset-md-3">
                 
                     <div class="container text-center">
@@ -10,10 +10,13 @@
                     
                     <h1 class="connect">Connexion</h1>
                     <mat-card>
-                        <form action="">
+                        <!-- {{ loginData | json }} -->
+                        <form (ngSubmit)="formSubmit()">    
                             <mat-form-field class="full-width" appearance="outline">
                                 <mat-label>Username</mat-label>
                                 <input
+                                    [(ngModel)]="loginData.username"
+                                    name="username"
                                     required
                                     matInput 
                                     placeholder="Entrer votre nom d'utilisateur"
@@ -23,6 +26,9 @@
                             <mat-form-field class="full-width" appearance="outline">
                                 <mat-label>Password</mat-label>
                                 <input
+                                    [(ngModel)]="loginData.password"
+                                    name="password"
+                                    type="password"
                                     required
                                     matInput 
                                     placeholder="Entrer votre mot de passe"
