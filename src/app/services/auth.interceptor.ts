@@ -8,7 +8,7 @@ const TOKEN_HEADER = "Authorization";
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor
 {
-    public constructor(private login:LoginService) {
+    constructor(private login:LoginService) {
 
     }
 

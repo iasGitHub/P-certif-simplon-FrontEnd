@@ -7,7 +7,7 @@
         >
         <mat-icon>school</mat-icon>
     </a>
-    <span>KSpace</span>
+    <span>KSpace</span> 
     
     <span class="example-spacer"></span>
     <a
@@ -31,7 +31,7 @@
     </a>
 
     <a
-        *ngIf="login.isLoggedIn()"
+        *ngIf="login.isLoggedIn && user"
         mat-icon-button
         class="example-icon favorite-icon mr20 ml20"
         aria-label="Example icon-button with heart icon"
