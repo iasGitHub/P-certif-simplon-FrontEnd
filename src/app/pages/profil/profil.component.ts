@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-profil',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilComponent implements OnInit {
 
-  constructor() { }
+  user :any;
+  constructor(private login: LoginService) { }
 
   ngOnInit(): void {
+    this.user = this.login.getUser();
+    // this.login.getCurrentUser().subscribe(
+    //   (user: any) => {
+    //     this.user = user;
+    //   },
+    //   (error) => {
+    //     alert(error);
+    //   }
+    // );
   }
 
 }

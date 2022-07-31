@@ -1,14 +1,14 @@
 
 <div class="bootstrap-wrapper">
     <div class="container">
-        <div class="row">
+        <div class="row mt-5">
             <div class="col-md-6 offset-md-3">
                 
                     <div class="container text-center">
                         <img src="../../../assets/LogoKspace.jpg" alt=""/>
                     </div>
 
-                    <h1 class="subscribe"> Inscrivez-vous maintenant </h1>
+                    <h1 class="text-center mt-3" > Inscrivez-vous maintenant </h1>
                 <mat-card>
                         <!-- {{ user | json }} -->
                         
@@ -16,7 +16,7 @@
 
                           <!-- Champ pour nom d'utilisateur-->
                           <mat-form-field class="full-width" appearance="outline">
-                              <mat-label>Username</mat-label>
+                              <mat-label>Nom d'utilisateur</mat-label>
                               <input
                                   required
                                   [(ngModel)]="user.username"
@@ -29,7 +29,7 @@
 
                           <!-- Champ pour nom -->
                           <mat-form-field class="full-width" appearance="outline">
-                              <mat-label>FirstName</mat-label>
+                              <mat-label>Nom</mat-label>
                               <input
                                   required
                                   [(ngModel)]="user.firstName"
@@ -41,7 +41,7 @@
 
                             <!-- Champ pour prénom-->
                           <mat-form-field class="full-width" appearance="outline">
-                              <mat-label>LastName</mat-label>
+                              <mat-label>Prénom</mat-label>
                               <input
                                   required
                                   [(ngModel)]="user.lastName"
@@ -59,13 +59,13 @@
                                   [(ngModel)]="user.email"
                                   name="email"
                                   matInput
-                                  placeholder="Entrer votre email"
+                                  placeholder="Entrer votre adresse email"
                               />
                           </mat-form-field>
 
                           <!-- Champ pour mot de passe-->
                           <mat-form-field class="full-width" appearance="outline">
-                              <mat-label>Password</mat-label>
+                              <mat-label>Mot de passe</mat-label>
                               <input
                                   required
                                   [(ngModel)]="user.password"
@@ -78,7 +78,7 @@
 
                           <!-- Champ pour numéro de téléphone-->
                           <mat-form-field class="full-width" appearance="outline">
-                              <mat-label>Phone</mat-label>
+                              <mat-label>Téléphone</mat-label>
                               <input
                                   required
                                   [(ngModel)]="user.phone"
@@ -90,7 +90,7 @@
 
                           <!-- Champ pour photo de profil-->
                           <mat-form-field class="full-width" appearance="outline">
-                              <mat-label>Profile</mat-label>
+                              <mat-label>Photo de profil</mat-label>
                               <input
                                   required
                                   [(ngModel)]="user.profile"

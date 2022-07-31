@@ -9,7 +9,7 @@ import { LoginService } from 'src/app/services/login.service';
 export class NavbarComponent implements OnInit {
   
   isLoggedIn = false;
-  user = null;
+  user :any;
 
   
   constructor(public login: LoginService) { }

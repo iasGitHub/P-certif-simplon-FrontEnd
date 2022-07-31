@@ -18,13 +18,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { from } from 'rxjs';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon'; 
+import { MatIconModule} from '@angular/material/icon'; 
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { ProfilComponent } from './pages/profil/profil.component';
-import {MatListModule} from '@angular/material/list';
-import { SidebarComponent } from './pages/admin/sidebar/sidebar.component'; 
+import { MatListModule} from '@angular/material/list';
+import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
+import { WelcomeComponent } from './pages/admin/welcome/welcome.component'; 
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
     DashboardComponent,
     UserDashboardComponent,
     ProfilComponent,
-    SidebarComponent
+    SidebarComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +56,7 @@ import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
+    MatTableModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

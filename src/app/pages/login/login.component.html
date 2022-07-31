@@ -1,19 +1,19 @@
 
 <div class="bootstrap-wrapper">
     <div class="container">
-        <div class="row mt40">
+        <div class="row mt-5">
             <div class="col-md-6 offset-md-3">
                 
                     <div class="container text-center">
                         <img src="../../../assets/LogoKspace.jpg" alt="" />
                     </div>
                     
-                    <h1 class="connect">Connexion</h1>
+                    <h1 class="text-center mt-3" >Connexion</h1>
                     <mat-card>
                         <!-- {{ loginData | json }} -->
                         <form (ngSubmit)="formSubmit()">    
                             <mat-form-field class="full-width" appearance="outline">
-                                <mat-label>Username</mat-label>
+                                <mat-label>Nom d'utilisateur</mat-label>
                                 <input
                                     [(ngModel)]="loginData.username"
                                     name="username"
@@ -24,7 +24,7 @@
                             </mat-form-field>
         
                             <mat-form-field class="full-width" appearance="outline">
-                                <mat-label>Password</mat-label>
+                                <mat-label>Mot de passe</mat-label>
                                 <input
                                     [(ngModel)]="loginData.password"
                                     name="password"
