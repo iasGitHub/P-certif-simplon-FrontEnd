@@ -1,0 +1,53 @@
+<mat-card class="mt-5" *ngFor="let p of publications">
+    
+    <!-- En tête publication avec un titre & la catégorie comme sous titre -->
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>
+            {{ p.title }}
+        </mat-card-title>
+        <mat-card-subtitle>
+            {{ p.category.title}}
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <!-- Contenu de la publication -->
+    <mat-card-content>
+        <p> {{ p.content }}</p>
+    </mat-card-content>
+
+    <mat-card-content>
+        <button 
+            mat-flat-button
+            class="ml-5"
+        >
+            Commentaires
+        </button>
+        <button 
+            mat-stroked-button 
+            class="ml-5"
+        >
+            Nombre de commentaires
+        </button>
+        <button 
+            mat-flat-button 
+            color="accent" 
+            class="m-5"
+        >
+            Mettre à jour
+        </button>
+        <button 
+            mat-flat-button 
+            color="warn" 
+            class="ml-5"
+            (click)="deletePublication(p.id)"
+        >
+            Supprimer
+        </button>
+    </mat-card-content>
+
+</mat-card>
+
+<div class="container text-center mt-4">
+    <button routerLink="/admin/add-publication" mat-raised-button color="primary">Faire une publication</button>
+</div>
