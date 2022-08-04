@@ -18,7 +18,19 @@ export class PublicationService {
     return this._http.post(`${baseUrl}/publication/`, publication);
   }
 
+  // supprimer une publication
   public deletePublication(id: any) {
     return this._http.delete(`${baseUrl}/publication/${id}`);
   }
+
+  //récupérer la publication via l'id
+  public getPublication(id: any) {
+    return this._http.get(`${baseUrl}/publication/${id}`);
+  }
+
+  //mettre à jour la publication
+  public updatePublication(publication: any) {
+    return this._http.put(`${baseUrl}/publication/`, publication);
+  }
+
 }
