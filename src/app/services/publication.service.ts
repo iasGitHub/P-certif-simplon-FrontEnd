@@ -33,4 +33,19 @@ export class PublicationService {
     return this._http.put(`${baseUrl}/publication/`, publication);
   }
 
+  //récupérer les publications par catégorie
+  public getPublicationsByCategory(id: any) {
+    return this._http.get(`${baseUrl}/publication/category/${id}`);
+  }
+
+  //récupérer les publications actives
+  public getActivePublications() {
+    return this._http.get(`${baseUrl}/publication/active`);
+  }
+
+  // récupérer les publications actives d'une catégorie
+  public getActivePublicationsOfCategory(id: any) {
+    return this._http.get(`${baseUrl}/publication/category/active/${id}`);
+  }
+
 }

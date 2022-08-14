@@ -39,20 +39,21 @@ export class SignupComponent implements OnInit {
     }
 
     // ajout d'un utilisateur avec validation
-    this.userService.addUser(this.user).subscribe(
-      (data) => {
+    this.userService.addUser(this.user).subscribe({
+      next: (data) => {
         // success
         console.log(data);
         Swal.fire('Success', 'Utilisateur enregistré avec succès !');
       },
-      (error) => {
+      error: (error) => {
         //error
         console.log(error);
         this.snack.open('Vérifiez que tous les champs ont été remplis !', '',{
           duration: 3000,
         });
       }
-    );
+    
+    });
 
   }
 

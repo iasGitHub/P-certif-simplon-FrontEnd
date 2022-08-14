@@ -5,3 +5,13 @@
 div,a {
     margin: 12px;
 }
+
+.header {
+    position: relative;
+    top: 0%;
+    background-color: #45ABB6;
+    padding: 10px;
+    width: 100%;
+    color: #FFFFFF;
+}
+

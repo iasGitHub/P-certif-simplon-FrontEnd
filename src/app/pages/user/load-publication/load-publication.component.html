@@ -10,7 +10,7 @@
                         <mat-card-title>
                             {{ p.title }}
                         </mat-card-title>
-
+                        
                         <mat-card-subtitle>
                             {{ p.category.title }}
                         </mat-card-subtitle>
@@ -25,6 +25,8 @@
 
                     <mat-card-actions>
                         <button mat-button color="primary">voir plus </button>
+                        <button mat-button color="primary"> {{ p.nbreOfViews }} </button>
+                        <button mat-button color="primary"> {{ p.active }} </button>
                     </mat-card-actions>
                 </mat-card>
             </div>

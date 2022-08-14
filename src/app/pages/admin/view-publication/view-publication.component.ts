@@ -46,15 +46,16 @@ export class ViewPublicationComponent implements OnInit {
       showCancelButton : true,
     }).then((result) => {
       if(result.isConfirmed) {
-        this._publication.deletePublication(id).subscribe(
-          (data) => {
+        this._publication.deletePublication(id).subscribe({
+          next: (data) => {
             this.publications = this.publications.filter((publication) => publication.id != id);
             Swal.fire('Success', 'Publication supprimée ! ', 'success');
           },
-          (error) => {
+          error: (error) => {
             Swal.fire('Error', 'Erreur de chargement de la page ! ', 'error');
           }
-        );
+        
+        });
       }
     });
   }

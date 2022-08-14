@@ -10,6 +10,9 @@ body {
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
+        color: #6c757d;
+        line-height: 1.6666;
+        font-weight: 400;
 }
 
 

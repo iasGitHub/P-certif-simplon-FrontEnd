@@ -20,15 +20,17 @@ export class ViewCategoriesComponent implements OnInit {
   constructor(private _category: CategoryService) { }
 
   ngOnInit(): void {
-    this._category.categories().subscribe(
-      (data: any) => {
-      this.categories = data;
-      console.log(this.categories);
-    },
-    (error)=>{
-      console.log(error);
-      Swal.fire('Error !!', 'Erreur de chargement des données', 'error');
+    this._category.categories().subscribe({
+      next: (data: any) => {
+        this.categories = data;
+        console.log(this.categories);
+      },
+      error: (error)=> {
+        console.log(error);
+        Swal.fire('Error !!', 'Erreur de chargement des données', 'error');
+      }
     });
+
   }
 
 }

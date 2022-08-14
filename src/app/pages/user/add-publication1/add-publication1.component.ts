@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CategoryService } from 'src/app/services/category.service';
@@ -5,11 +6,12 @@ import { PublicationService } from 'src/app/services/publication.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-add-publication',
-  templateUrl: './add-publication.component.html',
-  styleUrls: ['./add-publication.component.css']
+  selector: 'app-add-publication1',
+  templateUrl: './add-publication1.component.html',
+  styleUrls: ['./add-publication1.component.css']
 })
-export class AddPublicationComponent implements OnInit {
+
+export class AddPublication1Component implements OnInit {
 
   categories = [
     {

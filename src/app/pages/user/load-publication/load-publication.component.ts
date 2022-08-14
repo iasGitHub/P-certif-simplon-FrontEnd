@@ -19,37 +19,39 @@ export class LoadPublicationComponent implements OnInit {
   {}
 
   ngOnInit(): void {
+
     this._route.params.subscribe((params) => {
       this.id = params['id'];
-    });
-
-    if(this.id == 0) {
-      console.log("Charge all publications");
-      this._publication.publications().subscribe({
-        next: (data) => {
-          this.publications = data;
-          console.log(this.publications);
-        },
-        error: (err) => {
-          console.log(err);
-          alert("Error loading publications");
-        }
+      if(this.id == 0) {
+        console.log("Charge all publications");
+        this._publication.getActivePublications().subscribe({
+          next: (data) => {
+            this.publications = data;
+            console.log(this.publications);
+          },
+          error: (err) => {
+            console.log(err);
+            alert("Error loading publications");
+          } 
+        });
+      } else {
+        //console.log("Charge publication by category");
+  
+        this._publication.getActivePublicationsOfCategory(this.id).subscribe({
+          next: (data: any) => {
+            this.publications = data;
+            console.log(this.publications);
+          },
+          error: (err: any) => {
+            console.log(err);
+            alert("Error loading publications");
+          }
       });
-    } else {
-      console.log("Charge publication by category");
-
-      this._publication.getPublicationsByCategory(this.id).subscribe({
-        next: (data: any) => {
-          this.publications = data;
-          console.log(this.publications);
-        },
-        error: (err: any) => {
-          console.log(err);
-          alert("Error loading publications");
-        }
+      
+    }
     });
     
-  }
+    
 
 }
 

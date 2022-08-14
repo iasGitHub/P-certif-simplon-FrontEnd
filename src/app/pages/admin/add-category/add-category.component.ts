@@ -30,15 +30,16 @@ category = {
       return ;
     }
 
-    this._category.addCategory(this.category).subscribe(
-      (data : any) => {
+    this._category.addCategory(this.category).subscribe({
+      next: (data : any) => {
         this.category.title = '',
         Swal.fire('Succès !', 'Catégorie ajoutée avec succès', 'success');
       },
-      (error) => {
+      error: (error) => {
         console.log(error);
         Swal.fire('Error !!', 'Erreur du serveur !!', 'error')
       }
-    );
+    
+    });
   }
 }

@@ -1,15 +1,14 @@
 <mat-card>
-    <h1>Faire une publication</h1>
+    <h1>Modifier une publication</h1>
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
 
-                <form (ngSubmit)="addPublication()">    
-
+                <form *ngIf="publication" (submit)="updateData()">
                    <mat-form-field class="w-100" appearance="fill">
                         <mat-label> Entrer le titre </mat-label>
                         <input
-                            [(ngModel)] = "publicationData.title"
+                            [(ngModel)] = "publication.title"
                             type="text"
                             name="title"
                             placeholder="Quel est le titre de votre article ?"
@@ -20,7 +19,7 @@
                    <mat-form-field class="w-100" appearance="fill">
                         <mat-label> Entrer le contenu </mat-label>
                         <textarea
-                            [(ngModel)] = "publicationData.content" 
+                            [(ngModel)] = "publication.content" 
                             type="textarea"
                             name="content"
                             rows="5"
@@ -33,7 +32,7 @@
                     <mat-form-field class="w-100" appearance="fill">
                         <mat-label> Date de la publication</mat-label>
                         <input
-                            [(ngModel)] = "publicationData.dateOfPublication" 
+                            [(ngModel)] = "publication.dateOfPublication" 
                             type="date"
                             name="dateOfPublication"
                             matInput
@@ -42,35 +41,24 @@
 
                     <mat-slide-toggle
                         name="active"
-                        [(ngModel)] = "publicationData.active"
-                        class="mt-2"
-                        style="margin-bottom: 5px;">
+                        [(ngModel)] = "publication.active"
+                        class="mt-2">
                         Status de la publication
                     </mat-slide-toggle>
-
-                    <mat-form-field class="w-100" appearance="fill">
-                        <mat-label> Entrer nom de l'image </mat-label>
-                        <input
-                            [(ngModel)] = "publicationData.picture"
-                            
-                            type="text"
-                            name="picture"
-                            matInput
-                        />
-                   </mat-form-field>
 
                     <br/>
                     <mat-form-field appearance="fill" class="mt-4 w-100">
                         <mat-label>Sélectionnez une catégorie </mat-label>
-                        <mat-select name="category" [(ngModel)] = "publicationData.category.id">
+                        <mat-select name="category" [(ngModel)] = "publication.category.id">
                           <mat-option *ngFor="let c of categories" [value]="c.id">
                             {{ c.title }}
                           </mat-option>
                         </mat-select>
                     </mat-form-field>
 
+
                     <div class="container text-center">
-                        <button mat-raised-button type="submit" color="primary">Publier</button>
+                        <button mat-raised-button type="submit" color="primary">Modifier</button>
                     </div>
                     
                 </form>

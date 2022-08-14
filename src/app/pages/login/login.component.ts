@@ -15,7 +15,11 @@ export class LoginComponent implements OnInit {
     password : '',
   };
 
-  constructor(private snack:MatSnackBar, private login:LoginService, private router:Router) { }
+  constructor(
+      private snack:MatSnackBar,
+      private login:LoginService,
+      private router:Router
+  ) {}
 
   ngOnInit(): void {
   }
@@ -44,8 +48,8 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    this.login.generateToken(this.loginData).subscribe(
-      (data: any) => {
+    this.login.generateToken(this.loginData).subscribe({
+      next: (data: any) => {
         console.log('success');
         console.log('data');
 
@@ -63,7 +67,7 @@ export class LoginComponent implements OnInit {
               this.login.LoginStatusSubject.next(true);
             } else if (this.login.getUserRole() == 'Apprenant') {
               // window.location.href = '/user-dashboard';
-              this.router.navigate(['user-dashboard']);
+              this.router.navigate(['user-dashboard/0']);
               this.login.LoginStatusSubject.next(true);
             } else {
               this.login.logout();
@@ -71,14 +75,15 @@ export class LoginComponent implements OnInit {
           }
         );
       },
-      (error) => {
+      error: (error) => {
         console.log('Error !');
         console.log(error);
         this.snack.open('les informations du compte ne sont pas valides ! Réssayez encore ', '', {
           duration: 3000,
         });
       }
-    );
+    
+    });
 
   }
 

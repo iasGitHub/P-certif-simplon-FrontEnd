@@ -20,8 +20,8 @@ export class SidebarComponent implements OnInit {
       next: (data) => {
         this.categories = data;
     },
-    error: (err) => {
-      console.log(err);
+    error: (error) => {
+      console.log(error);
       this._snack.open("Error loading categories", "OK", {
         duration: 3000
       });

@@ -1,3 +1,6 @@
+<div class="container-fluid">
+    <h1> La liste des publications</h1>
+</div>
 <mat-card class="mt-5" *ngFor="let p of publications">
     
     <!-- En tête publication avec un titre & la catégorie comme sous titre -->
@@ -9,6 +12,7 @@
         <mat-card-subtitle>
             {{ p.category.title}}
         </mat-card-subtitle>
+        
     </mat-card-header>
 
     <!-- Contenu de la publication -->
@@ -17,7 +21,8 @@
     </mat-card-content>
 
     <mat-card-content>
-        <button 
+        <button
+            [routerLink]="'/admin/view-comment/' + p.id + '/' + p.title" 
             mat-flat-button
             class="ml-5"
         >
@@ -29,7 +34,8 @@
         >
             Nombre de commentaires
         </button>
-        <button 
+        <button
+            [routerLink]="'/admin/publication/' + p.id" 
             mat-flat-button 
             color="accent" 
             class="m-5"

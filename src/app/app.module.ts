@@ -32,7 +32,12 @@ import { AddCategoryComponent } from './pages/admin/add-category/add-category.co
 import { ViewPublicationComponent } from './pages/admin/view-publication/view-publication.component';
 import { AddPublicationComponent } from './pages/admin/add-publication/add-publication.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatSelectModule } from '@angular/material/select'; 
+import { MatSelectModule } from '@angular/material/select';
+import { UpdatePublicationComponent } from './pages/admin/update-publication/update-publication.component';
+import { ViewCommentPublicationComponent } from './pages/admin/view-comment-publication/view-comment-publication.component'; 
+import { SidebarComponent as UserSidebar } from './pages/user/sidebar/sidebar.component';
+import { LoadPublicationComponent } from './pages/user/load-publication/load-publication.component';
+import { AddPublication1Component } from './pages/user/add-publication1/add-publication1.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +55,12 @@ import { MatSelectModule } from '@angular/material/select';
     ViewCategoriesComponent,
     AddCategoryComponent,
     ViewPublicationComponent,
-    AddPublicationComponent
+    AddPublicationComponent,
+    UpdatePublicationComponent,
+    ViewCommentPublicationComponent,
+    UserSidebar,
+    LoadPublicationComponent,
+    AddPublication1Component,
   ],
   imports: [
     BrowserModule,
