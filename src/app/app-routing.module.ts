@@ -74,10 +74,14 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'user-dashboard',
+    path:'user',
     component: UserDashboardComponent,
     canActivate: [NormalGuard],
     children: [
+      {
+        path: 'add-publication',
+        component: AddPublicationComponent,
+      },
       {
         path: ':id',
         component: LoadPublicationComponent,
@@ -99,7 +103,7 @@ const routes: Routes = [
         component: ViewCommentPublicationComponent,
       },
     ]
-  }
+  },
 ];
 
 @NgModule({
