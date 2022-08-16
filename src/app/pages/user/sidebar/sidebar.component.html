@@ -1,24 +1,24 @@
 <mat-card>
     <mat-action-list>
         <div mat-subheader> Menu </div>
-        <button routerLink="/user-dashboard/0" mat-list-item >
+        <button routerLink="/user/0" mat-list-item >
             <mat-icon mat-list-icon>home</mat-icon> Accueil
         </button>
         <button 
-            routerLink="/user-dashboard/publications"
+            routerLink="/user/0"
             mat-list-item 
             >
             <mat-icon mat-list-icon>description</mat-icon> Toutes les Publications
         </button>
         
         <button
-            [routerLink]="'/user-dashboard/' + c.id "
+            [routerLink]="'/user/' + c.id "
             mat-list-item
             *ngFor="let c of categories"
             >
             <mat-icon mat-list-icon>account_circle</mat-icon> {{ c.title }}
         </button>
-        <button routerLink="/user-dashboard/add-publication" mat-list-item >
+        <button routerLink="/user/add-publication" mat-list-item >
             <mat-icon mat-list-icon>add</mat-icon> Faire une publication
         </button>
         

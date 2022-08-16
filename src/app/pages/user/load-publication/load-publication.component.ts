@@ -36,7 +36,7 @@ export class LoadPublicationComponent implements OnInit {
         });
       } else {
         //console.log("Charge publication by category");
-  
+
         this._publication.getActivePublicationsOfCategory(this.id).subscribe({
           next: (data: any) => {
             this.publications = data;
