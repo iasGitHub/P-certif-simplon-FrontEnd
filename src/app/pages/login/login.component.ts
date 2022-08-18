@@ -67,7 +67,7 @@ export class LoginComponent implements OnInit {
               this.login.LoginStatusSubject.next(true);
             } else if (this.login.getUserRole() == 'Apprenant') {
               // window.location.href = '/user-dashboard';
-              this.router.navigate(['user-dashboard/0']);
+              this.router.navigate(['user/0']);
               this.login.LoginStatusSubject.next(true);
             } else {
               this.login.logout();

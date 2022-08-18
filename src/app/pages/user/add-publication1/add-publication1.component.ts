@@ -21,6 +21,7 @@ export class AddPublication1Component implements OnInit {
   ];
 
 
+
   publicationData = {
     title : '',
     content : '',
@@ -30,6 +31,7 @@ export class AddPublication1Component implements OnInit {
     category : {
       id : '',
     },
+    user : '',
   };
 
   constructor(
@@ -79,6 +81,7 @@ export class AddPublication1Component implements OnInit {
           category : {
             id : '',
           },
+          user : 'user.username',
         };
       },
       error : (error) => {

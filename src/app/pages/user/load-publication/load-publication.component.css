@@ -6,6 +6,10 @@
     text-overflow: ellipsis;
 }
 
+.carte {
+    padding: 20px;
+}
+
 .example-header-image {
     background-image: url("../../../../assets/knowledge1.jpeg");
     background-size: cover;
