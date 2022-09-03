@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PublicationService } from 'src/app/services/publication.service';
+import { CategoryService } from 'src/app/services/category.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-load-publication',
@@ -10,11 +12,14 @@ import { PublicationService } from 'src/app/services/publication.service';
 export class LoadPublicationComponent implements OnInit {
 
   id: any;
-  publications: any;
+  publications: any = [];
+  categories: any;
 
   constructor(
     private _route: ActivatedRoute,
     private _publication: PublicationService,
+    private _cat: CategoryService,
+    private _snack: MatSnackBar
   ) 
   {}
 
@@ -51,6 +56,17 @@ export class LoadPublicationComponent implements OnInit {
     }
     });
     
+    this._cat.categories().subscribe({
+      next: (data) => {
+        this.categories = data;
+    },
+    error: (error) => {
+      console.log(error);
+      this._snack.open("Error loading categories", "OK", {
+        duration: 3000
+      });
+    }
+  });
     
 
 }

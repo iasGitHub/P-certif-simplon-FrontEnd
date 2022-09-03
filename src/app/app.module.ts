@@ -38,6 +38,8 @@ import { ViewCommentPublicationComponent } from './pages/admin/view-comment-publ
 import { SidebarComponent as UserSidebar } from './pages/user/sidebar/sidebar.component';
 import { LoadPublicationComponent } from './pages/user/load-publication/load-publication.component';
 import { AddPublication1Component } from './pages/user/add-publication1/add-publication1.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { NgxStarRatingModule } from 'ngx-star-rating';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,7 @@ import { AddPublication1Component } from './pages/user/add-publication1/add-publ
     UserSidebar,
     LoadPublicationComponent,
     AddPublication1Component,
+    InstructionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +82,7 @@ import { AddPublication1Component } from './pages/user/add-publication1/add-publ
     MatTableModule,
     MatSlideToggleModule,
     MatSelectModule,
+    NgxStarRatingModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]

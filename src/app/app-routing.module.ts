@@ -13,6 +13,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProfilComponent } from './pages/profil/profil.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { AddPublication1Component } from './pages/user/add-publication1/add-publication1.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { LoadPublicationComponent } from './pages/user/load-publication/load-publication.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { AdminGuard } from './services/admin.guard';
@@ -102,6 +103,10 @@ const routes: Routes = [
         path: 'view-comment/:id/:title',
         component: ViewCommentPublicationComponent,
       },
+      {
+        path: 'instructions/:id',
+        component: InstructionsComponent,
+      }
     ]
   },
 ];

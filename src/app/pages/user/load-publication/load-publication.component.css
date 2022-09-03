@@ -8,9 +8,18 @@
 
 .carte {
     padding: 20px;
+    border-radius: 25px;
 }
 
 .example-header-image {
     background-image: url("../../../../assets/knowledge1.jpeg");
     background-size: cover;
+}
+
+.box {
+    padding: 10px 10px;
+}
+
+.box h5 {
+    font-size: 16px;
 }
