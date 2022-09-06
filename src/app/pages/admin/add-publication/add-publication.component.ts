@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 import { PublicationService } from 'src/app/services/publication.service';
 import Swal from 'sweetalert2';
@@ -33,7 +34,8 @@ export class AddPublicationComponent implements OnInit {
   constructor(
     private _cat : CategoryService,
     private _snack : MatSnackBar,
-    private _publication : PublicationService
+    private _publication : PublicationService,
+    private router:Router
     ) { }
 
   ngOnInit(): void {
@@ -78,6 +80,7 @@ export class AddPublicationComponent implements OnInit {
             id : '',
           },
         };
+        this.router.navigate(['/user/0']);
       },
       error : (error) => {
         Swal.fire('Error !! ', 'Erreur lors du chargement des publications ', 'error');

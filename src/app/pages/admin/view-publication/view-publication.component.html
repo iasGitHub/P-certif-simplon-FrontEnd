@@ -26,10 +26,11 @@
     
         <!-- Contenu de la publication -->
         <mat-card-content>
-            <p> {{ p.content }}</p>
+            <p class="truncate"> {{ p.content }}</p>
         </mat-card-content>
     
         <mat-card-content>
+            <a [routerLink]="'/admin/instructions/'+p.id" class="btn btn-dark btn-sm">Read more </a>
             <button
                 [routerLink]="'/admin/view-comment/' + p.id + '/' + p.title" 
                 mat-flat-button

@@ -72,6 +72,10 @@ const routes: Routes = [
         path: 'view-comment/:id/:title',
         component: ViewCommentPublicationComponent,
       },
+      {
+        path: 'instructions/:id',
+        component: InstructionsComponent,
+      }
     ],
   },
   {
@@ -90,10 +94,6 @@ const routes: Routes = [
       {
         path: 'publications',
         component: ViewPublicationComponent,
-      },
-      {
-        path: 'add-publication',
-        component: AddPublication1Component,
       },
       {
         path: 'publication/:id',

@@ -35,29 +35,28 @@
                 </mat-card>
             </div>
             <div class="col-lg-9">
-                <h4>Les plus récentes</h4>
+                <h2>Les plus récentes</h2>
     
-                <div class="row mt-5" *ngIf="publications">
+                <div class="rounded-x1 shadow-x1 row mt-5" *ngIf="publications">
                     <div *ngFor="let p of publications" class="carte col-lg-4 mt-3 mb-3">
                         <div class="box">
-                            <img src="../../../../assets/knowledge1.jpeg" width="100%" height="200px" alt="">
-                            <mat-card-title>
-                                <h5 class="mt-2 mb-2">{{ p.title }}</h5>
-                            </mat-card-title>
+                            <img class="rounded-t-x1 w-full h-36 object-cover" src="../../../../assets/knowledge1.jpeg"  alt="">
+                            <mat-card-header>
+                                <mat-card-title>
+                                    {{ p.title }}
+                                </mat-card-title>
+                                <mat-card-subtitle>
+                                    {{ p.category.title }}
+                                </mat-card-subtitle>
+                            </mat-card-header>
             
-                            <mat-card-subtitle>
-                                {{ p.category.title }}
-                            </mat-card-subtitle>
-            
-                        
+                            <mat-card-content>
+                                <p class="truncate">
+                                    {{ p.content }}
+                                </p>
+                            </mat-card-content>
+                            <a [routerLink]="'/user/instructions/'+p.id" class="btn btn-dark btn-sm">Read more </a>
                         </div>
-            
-                        <mat-card-content>
-                            <p class="truncate">
-                                {{ p.content }}
-                            </p>
-                        </mat-card-content>
-                        <a [routerLink]="'/user/instructions/'+p.id" class="btn btn-dark btn-sm">Read more </a>
                         
                     </div>
                 </div>

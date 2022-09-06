@@ -7,3 +7,11 @@ body {
     background-image: url("../../../../assets/publication.png");
     background-size: cover;
 }
+
+.truncate {
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
