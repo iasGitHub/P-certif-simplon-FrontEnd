@@ -12,6 +12,7 @@ export class InstructionsComponent implements OnInit {
   id: any;
   user :any;
   publications: any;
+  categories: any;
 
   constructor(private _route: ActivatedRoute,private _publication: PublicationService) { }
 

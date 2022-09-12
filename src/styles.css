@@ -10,9 +10,7 @@
 }
 
 html,
-body {
-    height: 100%;
-}
+
 body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -27,6 +25,6 @@ body {
     background-color: #45ABB6;
 }
 
-html, body { height: 100%; }
+html,
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
