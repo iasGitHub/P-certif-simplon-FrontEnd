@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 import { UserService } from 'src/app/services/user.service';
 import Swal from 'sweetalert2';
 
@@ -11,10 +12,13 @@ import Swal from 'sweetalert2';
 })
 export class SignupComponent implements OnInit {
 
+  isLoggedIn = false;
+
   constructor(
     private userService:UserService,
     private snack:MatSnackBar,
-    private router:Router
+    private router:Router,
+    public login: LoginService,
     ) { }
 
   public user = {
@@ -61,6 +65,11 @@ export class SignupComponent implements OnInit {
     
     });
 
+  }
+
+  public logout() {
+    this.login.logout();
+    this.login.LoginStatusSubject.next(false);
   }
 
 }

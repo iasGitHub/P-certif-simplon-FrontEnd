@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Modifier utilisateur</title>
+</head>
+<body>
+    <div class="bootstrap-wrapper">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-6 offset-md-3">
+                    
+    
+                        <h1 class="text-center mt-3" > Modifier les informations d'un utilisateur </h1>
+                    <mat-card>
+                            <!-- {{ user | json }} -->
+                            
+                        <form *ngIf="user" (submit)="updateData()">
+    
+                              <!-- Champ pour nom d'utilisateur-->
+                              <mat-form-field class="full-width" appearance="outline">
+                                  <mat-label>Nom d'utilisateur</mat-label>
+                                  <input
+                                      required
+                                      [(ngModel)]="user.username"
+                                      name="username"
+                                      matInput 
+                                      placeholder="Entrer votre nom d'utilisateur"
+                                  />
+                                  <mat-hint>Le nom d'utilisateur doit être unique !</mat-hint>
+                              </mat-form-field>
+    
+                              <!-- Champ pour nom -->
+                              <mat-form-field class="full-width" appearance="outline">
+                                  <mat-label>Nom</mat-label>
+                                  <input
+                                      required
+                                      [(ngModel)]="user.firstName"
+                                      name="firstName"
+                                      matInput
+                                      placeholder="Entrer votre nom"
+                                  />
+                              </mat-form-field>
+    
+                                <!-- Champ pour prénom-->
+                              <mat-form-field class="full-width" appearance="outline">
+                                  <mat-label>Prénom</mat-label>
+                                  <input
+                                      required
+                                      [(ngModel)]="user.lastName"
+                                      name="lastName"
+                                      matInput
+                                      placeholder="Entrer votre prénom"
+                                  />
+                              </mat-form-field>
+    
+                              <!-- Champ pour email-->
+                              <mat-form-field class="full-width" appearance="outline">
+                                  <mat-label>Email</mat-label>
+                                  <input
+                                      required
+                                      [(ngModel)]="user.email"
+                                      name="email"
+                                      matInput
+                                      placeholder="Entrer votre adresse email"
+                                  />
+                              </mat-form-field>
+    
+                              <!-- Champ pour mot de passe-->
+                              <mat-form-field class="full-width" appearance="outline">
+                                  <mat-label>Mot de passe</mat-label>
+                                  <input
+                                      required
+                                      [(ngModel)]="user.password"
+                                      name="password"
+                                      type="password"
+                                      matInput
+                                      placeholder="Entrer votre mot de passe"
+                                  />
+                              </mat-form-field>
+    
+                              <!-- Champ pour numéro de téléphone-->
+                              <mat-form-field class="full-width" appearance="outline">
+                                  <mat-label>Téléphone</mat-label>
+                                  <input
+                                      required
+                                      [(ngModel)]="user.phone"
+                                      name="phone"
+                                      matInput
+                                      placeholder="Entrer votre numéro de téléphone"
+                                  />
+                              </mat-form-field>
+    
+                              <!-- Champ pour photo de profil-->
+                              <mat-form-field class="full-width" appearance="outline">
+                                  <mat-label>Photo de profil</mat-label>
+                                  <input
+                                      required
+                                      [(ngModel)]="user.profile"
+                                        name="profile"
+                                      matInput
+                                      placeholder="Choisissez une photo"
+                                  />
+                                </mat-form-field>
+    
+                              <!-- Button pour valider || annuler -->
+                              <div class="container text-center">
+                                  <button type="submit" class="seConnecter" mat-raised-button>Inscrire</button>
+                                  <button class="annulerRegis" mat-raised-button>Annuler</button>
+                              </div>
+                              
+                        </form>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

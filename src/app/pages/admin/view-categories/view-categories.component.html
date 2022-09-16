@@ -1,15 +1,50 @@
-<mat-card>
-    <h1>Toutes les catégories</h1>
-    <mat-list>
-        <mat-list-item *ngFor="let c of categories">
-            <mat-icon mat-list-icon>category</mat-icon> <!--category-->
-            <div mat-line> {{ c.title }} </div>
-            <mat-divider></mat-divider>
-        </mat-list-item>
-    </mat-list>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des catégories</title>
+</head>
+<body>
 
+    <h1>Toutes les catégories</h1>
+    
+    <div class="card" >
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table student-data-table m-t-20">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let c of categories">
+                        <tr>
+                            <td>
+                                {{ c.id }}
+                            </td>
+                            <td>
+                                {{ c.title }}
+                            </td>
+                            
+                            <td>
+                                <button class="btn btn-warning" [routerLink]="'/admin/category/' + c.id">Editer</button>
+                                <button class="btn btn-danger">Supprimer</button>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
     <div class="container text-center mt-4">
         <button routerLink="/admin/add-category" mat-raised-button color="primary">Ajouter une catégorie</button>
     </div>
-    
-</mat-card>
+        
+</body>
+</html>

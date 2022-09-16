@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 import { AddPublicationComponent } from './pages/admin/add-publication/add-publication.component';
+import { AddRoleComponent } from './pages/admin/add-role/add-role.component';
+import { AddUserComponent } from './pages/admin/add-user/add-user.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { ListUsersComponent } from './pages/admin/list-users/list-users.component';
+import { UpdateCategorieComponent } from './pages/admin/update-categorie/update-categorie.component';
 import { UpdatePublicationComponent } from './pages/admin/update-publication/update-publication.component';
+import { UpdateUserComponent } from './pages/admin/update-user/update-user.component';
 import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
 import { ViewCommentPublicationComponent } from './pages/admin/view-comment-publication/view-comment-publication.component';
 import { ViewPublicationComponent } from './pages/admin/view-publication/view-publication.component';
@@ -57,6 +62,10 @@ const routes: Routes = [
         component: AddCategoryComponent,
       },
       {
+        path: 'category/:id',
+        component: UpdateCategorieComponent,
+      },
+      {
         path: 'publications',
         component: ViewPublicationComponent,
       },
@@ -75,6 +84,22 @@ const routes: Routes = [
       {
         path: 'instructions/:id',
         component: InstructionsComponent,
+      },
+      {
+        path : 'add-user',
+        component : AddUserComponent,
+      },
+      {
+        path: 'user/:id',
+        component: UpdateUserComponent,
+      },
+      {
+        path : 'listUsers',
+        component : ListUsersComponent,
+      },
+      {
+        path : 'add-role',
+        component : AddRoleComponent,
       }
     ],
   },

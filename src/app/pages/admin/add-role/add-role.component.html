@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gestion des rôles </title>
+</head>
+<body>
+        <h1>Ajouter un rôle </h1>
+            <div class="bootstrap-wrapper">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <form (ngSubmit)="formSubmit()">
+                            <mat-form-field class="w-100" appearance="outline">
+                                <mat-label>Nom du rôle</mat-label>
+                                
+                                <input
+                                    required="*"
+                                    autofocus
+                                    type="text"
+                                    name="roleName" 
+                                    matInput
+                                    placeholder="entrer un rôle"
+                                    [(ngModel)] ="role.roleName"
+                                />
+    
+                            </mat-form-field>
+                            <div class="container text-center mt-2">
+                                <button mat-raised-button color="primary">Enregistrer</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

@@ -18,4 +18,9 @@ export class CategoryService {
     return this._http.post(`${baseUrl}/category/`, category);
   }
 
+  //mettre à jour la publication
+  public updateCategory(category: any) {
+    return this._http.put(`${baseUrl}/category/`, category);
+  }
+
 }

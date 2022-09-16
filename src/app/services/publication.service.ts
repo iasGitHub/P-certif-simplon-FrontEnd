@@ -5,6 +5,7 @@ import baseUrl from './helper';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PublicationService {
 
   constructor(private _http: HttpClient) {}

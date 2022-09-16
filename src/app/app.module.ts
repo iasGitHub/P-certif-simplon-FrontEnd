@@ -40,6 +40,11 @@ import { LoadPublicationComponent } from './pages/user/load-publication/load-pub
 import { AddPublication1Component } from './pages/user/add-publication1/add-publication1.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { NgxStarRatingModule } from 'ngx-star-rating';
+import { ListUsersComponent } from './pages/admin/list-users/list-users.component';
+import { AddRoleComponent } from './pages/admin/add-role/add-role.component';
+import { AddUserComponent } from './pages/admin/add-user/add-user.component';
+import { UpdateUserComponent } from './pages/admin/update-user/update-user.component';
+import { UpdateCategorieComponent } from './pages/admin/update-categorie/update-categorie.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +69,11 @@ import { NgxStarRatingModule } from 'ngx-star-rating';
     LoadPublicationComponent,
     AddPublication1Component,
     InstructionsComponent,
+    ListUsersComponent,
+    AddRoleComponent,
+    AddUserComponent,
+    UpdateUserComponent,
+    UpdateCategorieComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,25 +16,25 @@
             <ul>
                 <li><a href='/admin/profil'>Mon profile</a></li>
                 
-                <li class='sub-menu'><a href=''>Gestion des utilisateurs<div class='fa fa-caret-down right'></div></a>
+                <li class='sub-menu'><a >Gestion des utilisateurs<div class='fa fa-caret-down right'></div></a>
                     <ul>
-                        <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/signup'>Ajouter un utilisateur</a></li>
-                        <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/listeUtilisateurs'>Liste des utilisateurs</a></li>
+                        <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/admin/add-user'>Ajouter un utilisateur</a></li>
+                        <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/admin/listUsers'>Liste des utilisateurs</a></li>
                     </ul>
                 </li>
-                <li class='sub-menu'><a href=''>Gestion des rôles<div class='fa fa-caret-down right'></div></a>
+                <li class='sub-menu'><a >Gestion des rôles<div class='fa fa-caret-down right'></div></a>
                     <ul>
-                        <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/role'>Ajouter un role</a></li>
-                        <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/listeRoles'>Liste des rôles</a></li>
+                        <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/admin/add-role'>Ajouter un role</a></li>
+                        <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/admin/listeRoles'>Liste des rôles</a></li>
                     </ul>
                 </li>
-                <li class='sub-menu'><a href=''>Publications<div class='fa fa-caret-down right'></div></a>
+                <li class='sub-menu'><a>Gestion des publications<div class='fa fa-caret-down right'></div></a>
                     <ul>
                         <li><a href='/admin/add-publication'>Faire une publication</a></li>
                         <li><a href='/admin/publications'>Liste des publications</a></li>
                     </ul>
                 </li>
-                <li class='sub-menu'><a href='#message'>Catégorie<div class='fa fa-caret-down right'></div></a>
+                <li class='sub-menu'><a >Gestion des catégories<div class='fa fa-caret-down right'></div></a>
                     <ul>
                         <li><a href='/admin/add-category'>Ajouter une catégorie</a></li>
                         <li><a href='/admin/categories'>Liste des catégories</a></li>

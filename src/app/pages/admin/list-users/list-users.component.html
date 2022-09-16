@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des utilisateurs</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>La liste des utilisateurs</h1>
+    </div>
+            <div class="card" >
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table student-data-table m-t-20">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Nom d'utilisateur</th>
+                                    <th>Email</th>
+                                    <th>Téléphone</th>
+                                    <th>Photo</th>
+                                    <th>Statut du compte</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let u of users">
+                                <tr>
+                                    <td>{{ u.id}}</td>
+                                    <td>
+                                        {{ u.firstName }}
+                                    </td>
+                                    <td>
+                                        {{ u.lastName }}
+                                    </td>
+                                    <td>
+                                        {{ u.username }}
+                                    </td>
+                                    <td>
+                                        {{ u.email }}
+                                    </td>
+                                    <td>
+                                        {{ u.phone }}
+                                    </td>
+                                    <td>
+                                        {{ u.profile }}
+                                    </td>
+                                    <td>
+                                        {{ u.enabled }}
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-warning" [routerLink]="'/admin/user/' + u.id" >Editer</button>
+                                        <button class="btn btn-danger">Bloquer</button>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    
+</body>
+</html>

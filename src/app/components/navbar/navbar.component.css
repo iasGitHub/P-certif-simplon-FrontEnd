@@ -1,21 +1,5 @@
-.spacer {
-    flex: 1 1 auto;
-}
-
-div,a {
-    margin: 5px;
-}
-
-.header {
-    position: relative;
-    top: 0%;
-    background-color: #45ABB6;
-    padding: 10px;
-    width: 100%;
-    color: #FFFFFF;
-    margin: 0;
-}
 
 body {
     background-color: #45ABB6;
+    overflow-x: hidden;
 }   

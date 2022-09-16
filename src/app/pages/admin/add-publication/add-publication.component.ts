@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 })
 export class AddPublicationComponent implements OnInit {
 
+
   categories = [
     {
       id : '',
@@ -89,6 +90,12 @@ export class AddPublicationComponent implements OnInit {
       
     });
     
+  }
+
+  onFileSelected(event: any) {
+    if(event.target.files) {
+      const file = event.target.files[0];
+    }
   }
 
 }

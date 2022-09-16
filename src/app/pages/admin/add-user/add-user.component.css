@@ -1,0 +1,23 @@
+body {
+    height: 1000px;
+}
+
+.full-width{
+    width: 100%;
+
+}
+
+.subscribe {
+    margin-left: 50px;
+}
+
+.seConnecter {
+    background-color: #45ABB6;
+    color: white;
+}
+
+.annulerRegis {
+    margin-left: 20px; 
+    background-color: red;
+    color: white;
+}
