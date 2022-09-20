@@ -1,30 +1,41 @@
-<mat-card>
-    <h1>Ajouter une nouvelle catégorie </h1>
-    <mat-card-content>
-        <div class="bootstrap-wrapper">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <form (ngSubmit)="formSubmit()">
-                        <mat-form-field class="w-100" appearance="outline">
-                            <mat-label>Title</mat-label>
-                            
-                            <input
-                                required="*"
-                                autofocus
-                                type="text"
-                                name="title" 
-                                matInput
-                                placeholder="entrer une catégorie"
-                                [(ngModel)] ="category.title"
-                            />
-
-                        </mat-form-field>
-                        <div class="container text-center mt-2">
-                            <button mat-raised-button color="primary">Enregistrer</button>
-                        </div>
-                    </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <mat-card>
+        <h1>Ajouter une nouvelle catégorie </h1>
+        <mat-card-content>
+            <div class="bootstrap-wrapper">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <form (ngSubmit)="formSubmit()">
+                            <mat-form-field class="w-100" appearance="outline">
+                                <mat-label>Title</mat-label>
+                                
+                                <input
+                                    required="*"
+                                    autofocus
+                                    type="text"
+                                    name="title" 
+                                    matInput
+                                    placeholder="entrer une catégorie"
+                                    [(ngModel)] ="category.title"
+                                />
+    
+                            </mat-form-field>
+                            <div class="container text-center mt-2">
+                                <button mat-raised-button color="primary">Enregistrer</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </mat-card-content>
-</mat-card>
+        </mat-card-content>
+    </mat-card>
+</body>
+</html>

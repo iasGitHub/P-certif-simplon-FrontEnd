@@ -1,6 +1,8 @@
 body {
     height: 1000px;
+    box-sizing: border-box;
 }
+
 
 .full-width{
     width: 100%;
