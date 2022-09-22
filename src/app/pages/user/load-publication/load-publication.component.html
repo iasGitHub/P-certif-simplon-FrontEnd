@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container-fluid mt-5">
-
+        
         <div class="row">
             <div class="col-lg-3">
                 <mat-card >
@@ -36,9 +36,10 @@
             </div>
             <div class="col-lg-9">
                 <h2>Les plus récentes</h2>
-    
-                <div class="rounded-x1 shadow-x1 row mt-5" *ngIf="publications">
-                    <div *ngFor="let p of publications" class="carte col-lg-4 mt-3 mb-3">
+                <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+                <div *ngFor="let p of publications" class="rounded-x1 shadow-x1 row mt-5">
+                <div class=" carte col-lg-4 mt-3 mb-3" *ngIf="searchText === '' || p.title.includes(searchText)">
+                    
                         <div class="box">
                             <img class="rounded-t-x1 w-full h-36 object-cover" src="../../../../assets/knowledge1.jpeg"  alt="">
                             <mat-card-header>
