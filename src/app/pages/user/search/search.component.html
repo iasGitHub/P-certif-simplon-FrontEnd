@@ -1,8 +1,9 @@
 <div class="search-container">
-    <span>Search :</span>
+    <span>Search : </span>
     <input 
         type="text"
         [(ngModel)]="enteredSearchValue"
         (input)="onSearchTextChanged()"
+        placeholder="Rechercher un titre !"
     >
 </div>

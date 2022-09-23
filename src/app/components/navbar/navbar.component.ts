@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -10,9 +10,14 @@ export class NavbarComponent implements OnInit {
   
   isLoggedIn = false;
   user :any;
-
   
   constructor(public login: LoginService) { }
+
+  enteredSearchValue : string = '';
+  searchText : string = '';
+
+  
+
 
   ngOnInit(): void {
     this.isLoggedIn = this.login.isLoggedIn();

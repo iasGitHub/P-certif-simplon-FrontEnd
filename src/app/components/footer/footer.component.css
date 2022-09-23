@@ -1,9 +1,16 @@
 .footer {
     position: fixed;
-    bottom: 0%;
+
+    bottom: 0;
     background-color: #FCC559;
     text-align: center;
     padding: 10px;
     width: 100%;
+    height: 40px;
     color: #FFFFFF;
+}
+
+
+.footer{
+    color: #45ABB6;
 }

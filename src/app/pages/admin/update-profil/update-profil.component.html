@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page modification profil</title>
+</head>
+<body>
+    <div class="updateProfil">
+        
+            <h1> Modifier les details du profil</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <form *ngIf="user" (submit)="updateData()">
+            
+                                <!-- Champ pour nom d'utilisateur-->
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Nom d'utilisateur</mat-label>
+                                    <input
+                                        [(ngModel)]="user.username"
+                                        name="username"
+                                        matInput 
+                                        placeholder="Entrer votre nom d'utilisateur"
+                                    />
+                                    <mat-hint>Le nom d'utilisateur doit être unique !</mat-hint>
+                                </mat-form-field>
+      
+                                <!-- Champ pour nom -->
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Nom</mat-label>
+                                    <input
+                                        [(ngModel)]="user.firstName"
+                                        name="firstName"
+                                        matInput
+                                        placeholder="Entrer votre nom"
+                                    />
+                                </mat-form-field>
+      
+                                  <!-- Champ pour prénom-->
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Prénom</mat-label>
+                                    <input
+                                        [(ngModel)]="user.lastName"
+                                        name="lastName"
+                                        matInput
+                                        placeholder="Entrer votre prénom"
+                                    />
+                                </mat-form-field>
+      
+                                <!-- Champ pour email-->
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Email</mat-label>
+                                    <input
+                                        [(ngModel)]="user.email"
+                                        name="email"
+                                        matInput
+                                        placeholder="Entrer votre adresse email"
+                                    />
+                                </mat-form-field>
+      
+                                <!-- Champ pour mot de passe-->
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Mot de passe</mat-label>
+                                    <input
+                                        [(ngModel)]="user.password"
+                                        name="password"
+                                        type="password"
+                                        matInput
+                                        placeholder="Entrer votre mot de passe"
+                                    />
+                                </mat-form-field>
+      
+                                <!-- Champ pour numéro de téléphone-->
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Téléphone</mat-label>
+                                    <input
+                                        [(ngModel)]="user.phone"
+                                        name="phone"
+                                        matInput
+                                        placeholder="Entrer votre numéro de téléphone"
+                                    />
+                                </mat-form-field>
+      
+                                <!-- Champ pour photo de profil-->
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Photo de profil</mat-label>
+                                    <input
+                                        [(ngModel)]="user.profile"
+                                          name="profile"
+                                        matInput
+                                        placeholder="Choisissez votre photo"
+                                    />
+                                  </mat-form-field>
+
+                        </form>
+                        </div>
+                    </div>
+                </div>
+        
+            <mat-card-actions class="text-center">
+                <button 
+                    mat-raised-button 
+                    color="primary"
+                    [routerLink]="'/admin/profil/' + user.id"
+                >
+                    Mettre-à-jour
+                </button>
+                <button mat-raised-button>Annuler</button>
+            </mat-card-actions>
+            
+    </div>
+</body>
+</html>

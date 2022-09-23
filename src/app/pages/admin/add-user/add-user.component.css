@@ -1,5 +1,4 @@
 body {
-    height: 1000px;
     box-sizing: border-box;
 }
 
@@ -23,3 +22,21 @@ body {
     background-color: red;
     color: white;
 }
+
+.addUser {
+	position: fixed;
+	top: 80px;
+	bottom: 30px;
+	width: 100%;
+	transition: all 0.3s;
+	padding: 20px;
+	overflow-y: auto;
+}
+
+
+@media (max-width: 1199px) {
+	.full-width {
+	  width: 100%;
+	}
+  }
+

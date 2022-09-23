@@ -7,10 +7,10 @@
     <title>Liste des utilisateurs</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="listUser">
         <h1>La liste des utilisateurs</h1>
-    </div>
-            <div class="card" >
+    
+            <div class="" >
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table student-data-table m-t-20">
@@ -52,9 +52,9 @@
                                         {{ u.enabled }}
                                     </td>
                                     <td>
-                                        <button class="btn btn-warning" [routerLink]="'/admin/user/' + u.id" >Editer</button>
-                                        <button class="btn btn-danger">Bloquer</button>
+                                        <button class="w-100 btn btn-warning" [routerLink]="'/admin/user/' + u.id" >Editer</button>
                                     </td>
+                                    
                                 </tr>
                                 
                             </tbody>
@@ -62,6 +62,7 @@
                     </div>
                 </div>
             </div>
+    </div>
     
 </body>
 </html>

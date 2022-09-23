@@ -1,1 +1,39 @@
-<p>update-categorie works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="updateCategorie">
+        <h1>Modifier une catégorie</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 offset-md-2">
+    
+                    <form *ngIf="categorie" (submit)="updateData()">
+                       <mat-form-field class="w-100" appearance="fill">
+                            <mat-label> Entrer le titre </mat-label>
+                            <input
+                                [(ngModel)] = "categorie.title"
+                                type="text"
+                                name="title"
+                                matInput
+                            />
+                       </mat-form-field>
+    
+    
+                        <div class="container text-center">
+                            <button mat-raised-button type="submit" color="primary">Modifier</button>
+                        </div>
+                        
+                    </form>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

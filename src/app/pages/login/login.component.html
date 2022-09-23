@@ -1,48 +1,58 @@
-
-<div class="bootstrap-wrapper">
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-md-6 offset-md-3">
-                
-                    <div class="container text-center">
-                        <img src="../../../assets/LogoKspace.jpg" alt="" />
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="login" class=" login bootstrap-wrapper">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-6 col-md-6 offset-md-3">
                     
-                    <h1 class="text-center mt-3" >Connexion</h1>
-                    <mat-card>
-                        <!-- {{ loginData | json }} -->
-                        <form (ngSubmit)="formSubmit()">    
-                            <mat-form-field class="full-width" appearance="outline">
-                                <mat-label>Nom d'utilisateur</mat-label>
-                                <input
-                                    [(ngModel)]="loginData.username"
-                                    name="username"
-                                    required
-                                    matInput 
-                                    placeholder="Entrer votre nom d'utilisateur"
-                                />
-                            </mat-form-field>
-        
-                            <mat-form-field class="full-width" appearance="outline">
-                                <mat-label>Mot de passe</mat-label>
-                                <input
-                                    [(ngModel)]="loginData.password"
-                                    name="password"
-                                    type="password"
-                                    required
-                                    matInput 
-                                    placeholder="Entrer votre mot de passe"
-                                />
-                            </mat-form-field>
-        
-                            <div class="">
-                                <button mat-raised-button class="seConnecter" type="submit">Se connecter</button>
-                            </div>
-        
-                        </form>
-                    </mat-card>
-            </div>
+                        <div class="container text-center">
+                            <img src="../../../assets/LogoKspace.jpg" class="w-50" alt="" />
+                        </div>
+                        
+                        <h1 class="text-center mt-3" >Connexion</h1>
+                        
+                            <!-- {{ loginData | json }} -->
+                            <form (ngSubmit)="formSubmit()">    
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Nom d'utilisateur</mat-label>
+                                    <input
+                                        [(ngModel)]="loginData.username"
+                                        name="username"
+                                        required
+                                        matInput 
+                                        placeholder="Entrer votre nom d'utilisateur"
+                                    />
+                                </mat-form-field>
+            
+                                <mat-form-field class="full-width" appearance="outline">
+                                    <mat-label>Mot de passe</mat-label>
+                                    <input
+                                        [(ngModel)]="loginData.password"
+                                        name="password"
+                                        type="password"
+                                        required
+                                        matInput 
+                                        placeholder="Entrer votre mot de passe"
+                                    />
+                                </mat-form-field>
+                                
+                                <div class="center">
+                                    <button mat-raised-button class="seConnecter" type="submit">Se connecter</button>
+                                </div>
+            
+                            </form>
+                </div>
 
+            </div>
         </div>
     </div>
-</div>
+</body>
+</html>

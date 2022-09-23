@@ -11,30 +11,30 @@
     <title>Document</title>
 </head>
 <body>
-    <aside >
+    <aside id="sidebar" class="sidebar">
         <nav class='menu animated bounceInDown'>
             <ul>
                 <li><a href='/admin/profil'>Mon profile</a></li>
                 
-                <li class='sub-menu'><a >Gestion des utilisateurs<div class='fa fa-caret-down right'></div></a>
+                <li class='sub-menu'><a >Gestion des utilisateurs</a>
                     <ul>
                         <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/admin/add-user'>Ajouter un utilisateur</a></li>
                         <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/admin/listUsers'>Liste des utilisateurs</a></li>
                     </ul>
                 </li>
-                <li class='sub-menu'><a >Gestion des rôles<div class='fa fa-caret-down right'></div></a>
+                <li class='sub-menu'><a >Gestion des rôles</a>
                     <ul>
                         <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/admin/add-role'>Ajouter un role</a></li>
                         <li><a *ngIf="this.login.isLoggedIn() && this.login.getUserRole() == 'ADMIN' " routerLink='/admin/listeRoles'>Liste des rôles</a></li>
                     </ul>
                 </li>
-                <li class='sub-menu'><a>Gestion des publications<div class='fa fa-caret-down right'></div></a>
+                <li class='sub-menu'><a>Gestion des publications</a>
                     <ul>
                         <li><a href='/admin/add-publication'>Faire une publication</a></li>
                         <li><a href='/admin/publications'>Liste des publications</a></li>
                     </ul>
                 </li>
-                <li class='sub-menu'><a >Gestion des catégories<div class='fa fa-caret-down right'></div></a>
+                <li class='sub-menu'><a >Gestion des catégories</a>
                     <ul>
                         <li><a href='/admin/add-category'>Ajouter une catégorie</a></li>
                         <li><a href='/admin/categories'>Liste des catégories</a></li>

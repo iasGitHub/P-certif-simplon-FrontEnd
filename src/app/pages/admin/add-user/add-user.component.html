@@ -7,15 +7,15 @@
     <title>Admin | Ajout utilisateur</title>
 </head>
 <body>
-    <div class="row">
-        <div class="col-md-6 offset-md-3">
+    <div id ="addUser" class="addUser row">
+        <div class="col-lg-4 offset-lg-3">
             
                 <div class="container text-center">
                     <img src="../../../assets/LogoKspace.jpg" alt=""/>
                 </div>
 
                 <h1 class="text-center mt-3" > Inscrire un utilisateur </h1>
-            <mat-card>
+            
                     <!-- {{ user | json }} -->
                     
                 <form (ngSubmit)="formSubmit()">
@@ -27,7 +27,7 @@
                               required
                               [(ngModel)]="user.username"
                               name="username"
-                              matInput 
+                              matInput
                               placeholder="Entrer votre nom d'utilisateur"
                           />
                           <mat-hint>Le nom d'utilisateur doit être unique !</mat-hint>
@@ -113,7 +113,6 @@
                       </div>
                       
                 </form>
-            </mat-card>
         </div>
     </div>
 </body>

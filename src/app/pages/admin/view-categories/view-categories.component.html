@@ -7,12 +7,8 @@
     <title>Liste des catégories</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="listCategorie " >
         <h1>Toutes les catégories</h1>
-    </div>
-    
-    
-    <div class="card" >
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table student-data-table m-t-20">
@@ -31,10 +27,20 @@
                             <td>
                                 {{ c.title }}
                             </td>
-                            
                             <td>
-                                <button class="btn btn-warning" [routerLink]="'/admin/category/' + c.id">Editer</button>
-                                <button class="btn btn-danger">Supprimer</button>
+                                <button 
+                                    class="w-20 btn btn-warning" 
+                                    [routerLink]="'/admin/category/' + c.id"
+                                    >
+                                        Editer
+                                    </button>
+                                <button 
+                                    class="w-20 btn btn-danger"
+                                    (click)="deleteCategory(c.id)"
+
+                                    >
+                                    Supprimer
+                                </button>
                             </td>
                         </tr>
                         

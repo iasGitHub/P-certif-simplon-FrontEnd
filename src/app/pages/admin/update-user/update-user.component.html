@@ -20,11 +20,10 @@
                         <form *ngIf="user" (submit)="updateData()">
     
                               <!-- Champ pour nom d'utilisateur-->
-                              <mat-form-field class="full-width" appearance="outline">
+                              <mat-form-field class="full-width" appearance ="fill">
                                   <mat-label>Nom d'utilisateur</mat-label>
                                   <input
-                                      required
-                                      [(ngModel)]="user.username"
+                                      [(ngModel)] = "user.username"
                                       name="username"
                                       matInput 
                                       placeholder="Entrer votre nom d'utilisateur"
@@ -36,8 +35,8 @@
                               <mat-form-field class="full-width" appearance="outline">
                                   <mat-label>Nom</mat-label>
                                   <input
-                                      required
-                                      [(ngModel)]="user.firstName"
+                                      [(ngModel)] = "user.firstName"
+                                      type = "text"
                                       name="firstName"
                                       matInput
                                       placeholder="Entrer votre nom"
@@ -48,8 +47,8 @@
                               <mat-form-field class="full-width" appearance="outline">
                                   <mat-label>Prénom</mat-label>
                                   <input
-                                      required
-                                      [(ngModel)]="user.lastName"
+                                      [(ngModel)] = "user.lastName"
+                                      type = "text"
                                       name="lastName"
                                       matInput
                                       placeholder="Entrer votre prénom"
@@ -60,8 +59,8 @@
                               <mat-form-field class="full-width" appearance="outline">
                                   <mat-label>Email</mat-label>
                                   <input
-                                      required
-                                      [(ngModel)]="user.email"
+                                      [(ngModel)] = "user.email"
+                                      type = "text"
                                       name="email"
                                       matInput
                                       placeholder="Entrer votre adresse email"
@@ -72,8 +71,8 @@
                               <mat-form-field class="full-width" appearance="outline">
                                   <mat-label>Mot de passe</mat-label>
                                   <input
-                                      required
-                                      [(ngModel)]="user.password"
+                                      [(ngModel)] = "user.password"
+                                      type = "text"
                                       name="password"
                                       type="password"
                                       matInput
@@ -85,8 +84,8 @@
                               <mat-form-field class="full-width" appearance="outline">
                                   <mat-label>Téléphone</mat-label>
                                   <input
-                                      required
-                                      [(ngModel)]="user.phone"
+                                      [(ngModel)] = "user.phone"
+                                      type = "text"
                                       name="phone"
                                       matInput
                                       placeholder="Entrer votre numéro de téléphone"
@@ -97,9 +96,9 @@
                               <mat-form-field class="full-width" appearance="outline">
                                   <mat-label>Photo de profil</mat-label>
                                   <input
-                                      required
-                                      [(ngModel)]="user.profile"
-                                        name="profile"
+                                      [(ngModel)] = "user.profile"
+                                      type = "text"
+                                      name="profile"
                                       matInput
                                       placeholder="Choisissez une photo"
                                   />
@@ -107,7 +106,7 @@
     
                               <!-- Button pour valider || annuler -->
                               <div class="container text-center">
-                                  <button type="submit" class="seConnecter" mat-raised-button>Inscrire</button>
+                                  <button type="submit" class="seConnecter" mat-raised-button>Mettre à jour</button>
                                   <button class="annulerRegis" mat-raised-button>Annuler</button>
                               </div>
                               

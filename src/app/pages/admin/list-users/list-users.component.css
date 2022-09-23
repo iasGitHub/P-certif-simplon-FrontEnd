@@ -2,3 +2,23 @@ body {
     height: 1000px;
     box-sizing: border-box;
 }
+
+.listUser {
+	position: fixed;
+	top: 80px;
+	bottom: 30px;
+	width: 80%;
+	transition: all 0.3s;
+	padding: 20px;
+}
+
+@media (max-width: 1199px) {
+	.listUser {
+		position: fixed;
+		width: 100%;
+		font-size: 14px;
+	}
+	h1 {
+		font-size: 16px;
+	}
+  }

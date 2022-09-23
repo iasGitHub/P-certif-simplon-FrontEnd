@@ -33,4 +33,26 @@ export class ViewCategoriesComponent implements OnInit {
 
   }
 
+  deleteCategory(id : any) {
+    Swal.fire({
+      icon : 'info',
+      title : 'Etes-vous sûr de vouloir supprimer ?',
+      confirmButtonText : 'Oui',
+      showCancelButton : true,
+    }).then((result) => {
+      if(result.isConfirmed) {
+        this._category.deleteCategory(id).subscribe({
+          next: (data) => {
+            this.categories = this.categories.filter((category) => category.id != id);
+            Swal.fire('Success', 'Catégorie supprimée ! ', 'success');
+          },
+          error: (error) => {
+            Swal.fire('Error', 'Erreur de chargement de la page ! ', 'error');
+          }
+        
+        });
+      }
+    });
+  }
+
 }

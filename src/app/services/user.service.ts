@@ -30,6 +30,7 @@ export class UserService {
   public updateUser(user: any) {
     return this._http.put(`${baseUrl}/user/`, user);
   }
+
   
   
 }

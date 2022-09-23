@@ -11,23 +11,33 @@
     
     <div class="instructions container-fluid mt-5">
             <div class="row" >
-                <h1>Les details de l'article </h1>
+                <div class="col-lg-3">
+                    <mat-action-list>
+                        <button 
+                            routerLink="/user/0"
+                            mat-list-item 
+                        >
+                            <mat-icon mat-list-icon>description</mat-icon> Retour
+                        </button>
+                    </mat-action-list>
+                </div>
                 <div class="col-lg-9">
+                    <h1>Les details de l'article </h1>
                     <mat-card class="example-card">
+                        <img mat-card-image src="../../../../assets/angular.png" width="100%" height="400px" alt="Photo of the content">
                         <mat-card-header>
-                        <mat-card-title>{{ publications.title  }}</mat-card-title>
-                        <mat-card-subtitle>{{ publications.category.title }}</mat-card-subtitle>
+                            <mat-card-title>{{ publications.title  }}</mat-card-title>
+                            <mat-card-subtitle>{{ publications.category.title }}</mat-card-subtitle>
                         </mat-card-header>
-                        <img mat-card-image src="../../../../assets/knowledge1.jpeg" width="100%" height="400px" alt="Photo of the content">
-                        <mat-card-content class="mt-5">
-                        <p>
-                            {{ publications.content }}
-                        </p>
                         
+                        <mat-card-content class="mt-5">
+                            <p>
+                                {{ publications.content }}
+                            </p>
                         </mat-card-content>
                         <mat-card-actions>
                             <ngx-star-rating [id]="'rating'"></ngx-star-rating>
-                            <button mat-button>SHARE</button>
+                            <button mat-button>Partager</button>
                             <button mat-button color="primary"> {{ publications.nbreOfViews }} </button>
                         </mat-card-actions>
                     </mat-card>

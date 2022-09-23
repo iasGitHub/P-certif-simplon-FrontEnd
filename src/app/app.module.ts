@@ -45,6 +45,8 @@ import { AddRoleComponent } from './pages/admin/add-role/add-role.component';
 import { AddUserComponent } from './pages/admin/add-user/add-user.component';
 import { UpdateUserComponent } from './pages/admin/update-user/update-user.component';
 import { UpdateCategorieComponent } from './pages/admin/update-categorie/update-categorie.component';
+import { UpdateProfilComponent } from './pages/admin/update-profil/update-profil.component';
+import { SearchComponent } from './pages/user/search/search.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +76,8 @@ import { UpdateCategorieComponent } from './pages/admin/update-categorie/update-
     AddUserComponent,
     UpdateUserComponent,
     UpdateCategorieComponent,
+    UpdateProfilComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 import { PublicationService } from 'src/app/services/publication.service';
 import Swal from 'sweetalert2';
@@ -13,44 +13,34 @@ export class UpdateCategorieComponent implements OnInit {
 
   constructor(
     private _route: ActivatedRoute,
-    private _publication: PublicationService, 
-    private _cat: CategoryService
+    private _cat: CategoryService,
+    private router:Router,
   ) { }
 
   id = 0;
-  publication : any;
-  categories : any;
+  categorie : any;
 
   ngOnInit(): void {
 
     this.id = this._route.snapshot.params['id'];
-    this._publication.getPublication(this.id).subscribe({
+    this._cat.getCategory(this.id).subscribe({
       next: (data: any) => {
-        this.publication = data;
-        console.log(this.publication);
+        this.categorie = data;
+        console.log(this.categorie);
       },
       error: (error) => {
         console.log(error);
       }
     
     });
-
-    this._cat.categories().subscribe({
-      next: (data: any) => {
-        this.categories = data;
-      },
-      error: (error) => {
-        alert('Erreur de chargement des catégories ');
-      }
-    
-    });
   }
 
-  //mettre à jour les détails de la publication
+  //mettre à jour les détails de la catégorie
   public updateData() {
-    this._cat.updateCategory(this.categories).subscribe({
+    this._cat.updateCategory(this.categorie).subscribe({
       next: (data: any) => {
-        Swal.fire('Success !!', 'Publication mis à jour', 'success');
+        Swal.fire('Success !!', 'Catégorie mis à jour', 'success');
+        this.router.navigate(['/admin/categories']);
       },
       error: (error: any) => {
         Swal.fire('Error !!', 'Erreur lors de la mis à jour', 'error');

@@ -7,6 +7,7 @@ import { AddUserComponent } from './pages/admin/add-user/add-user.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { ListUsersComponent } from './pages/admin/list-users/list-users.component';
 import { UpdateCategorieComponent } from './pages/admin/update-categorie/update-categorie.component';
+import { UpdateProfilComponent } from './pages/admin/update-profil/update-profil.component';
 import { UpdatePublicationComponent } from './pages/admin/update-publication/update-publication.component';
 import { UpdateUserComponent } from './pages/admin/update-user/update-user.component';
 import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
@@ -52,6 +53,10 @@ const routes: Routes = [
       {
         path: 'profil',
         component: ProfilComponent,
+      },
+      {
+        path: 'profil/:id',
+        component: UpdateProfilComponent,
       },
       {
         path: 'categories',
@@ -110,7 +115,7 @@ const routes: Routes = [
     children: [
       {
         path: 'add-publication',
-        component: AddPublicationComponent,
+        component: AddPublication1Component,
       },
       {
         path: ':id',

@@ -23,6 +23,13 @@ export class ViewPublicationComponent implements OnInit {
     }
   ]
 
+  searchText: string = '';
+
+  onSearchTextEntered(searchValue: string) {
+    this.searchText = searchValue;
+    //console.log(this.searchText);
+  }
+
   constructor(private _publication: PublicationService) { }
 
   ngOnInit(): void {

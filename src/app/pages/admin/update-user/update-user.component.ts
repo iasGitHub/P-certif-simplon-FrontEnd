@@ -15,7 +15,7 @@ export class UpdateUserComponent implements OnInit {
     private _user: UserService,
   ) { }
 
-  id : any;
+  id = 0;
   user : any;
 
   ngOnInit(): void {

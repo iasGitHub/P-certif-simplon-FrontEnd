@@ -2,3 +2,14 @@ body {
     height: 1000px;
     box-sizing: border-box;
 }
+
+
+.listCategorie {
+	position: fixed;
+	top: 80px;
+	bottom: 30px;
+	width: 100%;
+	transition: all 0.3s;
+	padding: 20px;
+	overflow-y: auto;
+}

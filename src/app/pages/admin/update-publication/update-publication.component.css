@@ -1,0 +1,9 @@
+.updatePub{
+	position: fixed;
+	top: 80px;
+	bottom: 30px;
+	width: 100%;
+	transition: all 0.3s;
+	padding: 20px;
+	overflow-y: auto;
+}
