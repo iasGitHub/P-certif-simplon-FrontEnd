@@ -1,3 +1,7 @@
+body {
+    height: 3000px;
+}
+
 .truncate {
     display: block;
     white-space: nowrap;
@@ -12,6 +16,11 @@
     
 }
 
+.colonnes {
+    margin: 0 auto;
+    padding: 10px;
+}
+
 .example-header-image {
     background-image: url("../../../../assets/knowledge1.jpeg");
     background-size: cover;
@@ -19,7 +28,9 @@
 
 .box {
     padding: 10px 10px;
-    border-radius: 35px;
+    border-radius: 25px;
+    height: 55vh;
+    box-shadow: 0 0 2px blue;
 }
 
 

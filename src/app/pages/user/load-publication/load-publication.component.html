@@ -39,36 +39,32 @@
                     <h2>Les plus récentes</h2>
                     <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
                 
-                    <span *ngFor="let p of publications" class=" mt-5">
-                    <div class="carte col-lg-4 mt-3 mb-3" *ngIf="searchText === '' || p.title.includes(searchText)">
-                        
-                            <div class="box">
-                                <img class="rounded-t-x1 w-full h-36 object-cover" src="../../../../assets/knowledge1.jpeg"  alt="">
-                                <mat-card-header>
-                                    <mat-card-title>
-                                        {{ p.title }}
-                                    </mat-card-title>
-                                    <mat-card-subtitle>
-                                        {{ p.category.title }}
-                                    </mat-card-subtitle>
-                                </mat-card-header>
+                    <span *ngFor="let p of publications" class="carte col-lg-4 mt-3 mb-3">
+                    <div  *ngIf="searchText === '' || p.title.includes(searchText)">
+                        <div class="card box">
+                            <img class="rounded-t-x1 w-full h-36 object-cover" src="../../../../assets/knowledge1.jpeg"  alt="">
+                            <mat-divider ></mat-divider>
+                            <mat-card-header class="mt-3">
+                                <mat-card-title>
+                                    {{ p.title }}
+                                </mat-card-title>
+                                <mat-card-subtitle>
+                                    {{ p.category.title }}
+                                </mat-card-subtitle>
+                            </mat-card-header>
                 
-                                <mat-card-content>
-                                    <p class="truncate">
-                                        {{ p.content }}
-                                    </p>
-                                </mat-card-content>
-                                <a [routerLink]="'/user/instructions/'+p.id" class="btn btn-dark btn-sm">Read more </a>
-                            </div>
+                            <mat-card-content>
+                                <p class="truncate">
+                                    {{ p.content }}
+                                </p>
+                            </mat-card-content>
+                            <a [routerLink]="'/user/instructions/'+p.id" class="w-25 btn btn-success btn-sm">Lire plus </a>
                         </div>
+                    </div> 
                 </span>
                 </div>
             </div>
         </div>
-
-        
     </div>
-    
-    
 </body>
 </html>

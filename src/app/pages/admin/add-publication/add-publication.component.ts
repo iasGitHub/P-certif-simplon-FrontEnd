@@ -71,6 +71,7 @@ export class AddPublicationComponent implements OnInit {
     this._publication.addPublication(this.publicationData).subscribe({
       next: (data) => {
         Swal.fire('Success', 'Publication ajoutée avec succès', 'success');
+        this.router.navigate(['/admin/publications']);
         this.publicationData = {
           title : '',
           content : '',
@@ -81,7 +82,6 @@ export class AddPublicationComponent implements OnInit {
             id : '',
           },
         };
-        this.router.navigate(['/user/0']);
       },
       error : (error) => {
         Swal.fire('Error !! ', 'Erreur lors du chargement des publications ', 'error');

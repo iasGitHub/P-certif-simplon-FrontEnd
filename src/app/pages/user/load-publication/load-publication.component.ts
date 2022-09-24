@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { PublicationService } from 'src/app/services/publication.service';
 import { CategoryService } from 'src/app/services/category.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-load-publication',
@@ -14,17 +15,19 @@ export class LoadPublicationComponent implements OnInit {
   id: any;
   publications: any = [];
   categories: any;
+  user :any;
 
   constructor(
     private _route: ActivatedRoute,
     private _publication: PublicationService,
     private _cat: CategoryService,
-    private _snack: MatSnackBar
+    private _snack: MatSnackBar,
+    public login: LoginService
   ) 
   {}
 
   ngOnInit(): void {
-
+    this.user = this.login.getUser();
     this._route.params.subscribe((params) => {
       this.id = params['id'];
       if(this.id == 0) {

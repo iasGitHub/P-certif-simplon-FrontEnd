@@ -1,16 +1,15 @@
 
-body {
-    background-color: #45ABB6;
-    overflow-x: hidden;
-}   
+#header {
+  background-color: #45ABB6;
+  color: #fff;
+}
 
 a {
-    color: #45ABB6;
     text-decoration: none;
   }
   
   a:hover {
-    color: #45ABB6;
+    color: #fff;
     text-decoration: none;
   }
   
@@ -485,9 +484,7 @@ a {
     position: relative;
   }
   
-  .header-nav .nav-profile {
-    color: #45ABB6;
-  }
+  
   
   .header-nav .nav-profile img {
     max-height: 36px;

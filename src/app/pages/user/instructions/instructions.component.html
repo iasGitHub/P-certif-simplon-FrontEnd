@@ -23,7 +23,26 @@
                 </div>
                 <div class="col-lg-9">
                     <h1>Les details de l'article </h1>
-                    <mat-card class="example-card">
+                    <section>
+                        <img mat-card-image src="../../../../assets/angular.png" width="100%" height="400px" alt="Photo of the content">
+                    </section>
+                    <div class="text-center mt-5">
+                        <mat-card-header>
+                            <mat-card-title>{{ publications.title  }}</mat-card-title>
+                        </mat-card-header>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="text-center mt-5">
+                        <mat-card-subtitle>{{ publications.category.title }}</mat-card-subtitle>
+                    </div>
+                    <div class="mt-5">
+                        <mat-card-content >
+                            <p>
+                                {{ publications.content }}
+                            </p>
+                        </mat-card-content>
+                    </div>
+                    <!-- <mat-card class="example-card">
                         <img mat-card-image src="../../../../assets/angular.png" width="100%" height="400px" alt="Photo of the content">
                         <mat-card-header>
                             <mat-card-title>{{ publications.title  }}</mat-card-title>
@@ -40,7 +59,7 @@
                             <button mat-button>Partager</button>
                             <button mat-button color="primary"> {{ publications.nbreOfViews }} </button>
                         </mat-card-actions>
-                    </mat-card>
+                    </mat-card> -->
                     
                 </div>
             </div>
