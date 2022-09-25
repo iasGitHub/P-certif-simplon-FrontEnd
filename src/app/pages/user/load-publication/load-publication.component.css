@@ -36,7 +36,26 @@ body {
 
 .listPub {
 	top: 60px;
+    left: 450px;
 	bottom: 30px;
 	transition: all 0.3s;
 	padding: 20px;
+    overflow-y: auto;
+}
+
+.sidebar1 {
+    position: fixed;
+}
+
+
+@media (max-width: 1199px) {
+    .listPub {
+        top: 700px;
+        left: 0px;
+        bottom: 30px;
+        transition: all 0.3s;
+        padding: 20px;
+        overflow-y: auto;
+    }
+    
 }

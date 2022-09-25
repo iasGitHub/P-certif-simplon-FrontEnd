@@ -65,7 +65,7 @@
                             Status de la publication
                         </mat-slide-toggle>
         
-                        <mat-form-field class="w-100" appearance="fill">
+                        <!-- <mat-form-field class="w-100" appearance="fill">
                             <mat-label> Entrer le nom de l'image </mat-label>
                             <input
                                 [(ngModel)] = "publicationData.picture"
@@ -74,7 +74,12 @@
                                 name="picture"
                                 matInput
                             />
-                        </mat-form-field>
+                        </mat-form-field> -->
+                        <div>
+                            <input type="file" multiple value="select" #selectFile  
+                                    (change)="onFileSelected($event)"
+                            >
+                       </div>
         
                         <br/>
                         <mat-form-field appearance="fill" class="mt-4 w-100">

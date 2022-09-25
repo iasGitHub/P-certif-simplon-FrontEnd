@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 import { PublicationService } from 'src/app/services/publication.service';
 import Swal from 'sweetalert2';
@@ -31,13 +32,13 @@ export class AddPublication1Component implements OnInit {
     category : {
       id : '',
     },
-    user : '',
   };
 
   constructor(
     private _cat : CategoryService,
     private _snack : MatSnackBar,
-    private _publication : PublicationService
+    private _publication : PublicationService,
+    private router:Router
     ) { }
 
   ngOnInit(): void {
@@ -72,6 +73,7 @@ export class AddPublication1Component implements OnInit {
     this._publication.addPublication(this.publicationData).subscribe({
       next: (data) => {
         Swal.fire('Success', 'Publication ajoutée avec succès', 'success');
+        this.router.navigate(['/user/0']);
         this.publicationData = {
           title : '',
           content : '',
@@ -81,7 +83,6 @@ export class AddPublication1Component implements OnInit {
           category : {
             id : '',
           },
-          user : 'user.username',
         };
       },
       error : (error) => {
@@ -93,4 +94,9 @@ export class AddPublication1Component implements OnInit {
     
   }
 
+  onFileSelected(event: any) {
+    if(event.target.files) {
+      const file = event.target.files[0];
+    }
+  }
 }

@@ -39,9 +39,15 @@ export class SignupComponent implements OnInit {
   {
     console.log(this.user);
     if(this.user.username == '' || this.user.username == null ||
-    this.user.firstName == '' || this.user.firstName == null) {
+    this.user.firstName == '' || this.user.firstName == null ||
+    this.user.lastName == '' || this.user.lastName == null ||
+    this.user.email == '' || this.user.email == null ||
+    this.user.password == '' || this.user.password == null ||
+    this.user.phone == '' || this.user.phone == null ||
+    this.user.profile == '' || this.user.profile == null
+    ) {
       // alert('User is required !');
-      this.snack.open("Username & firstName are required ", '', {
+      this.snack.open("Les autres champs sont obligatires ", '', {
         duration: 3000,
       });
       return;

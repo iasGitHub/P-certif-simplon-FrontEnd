@@ -32,28 +32,19 @@
             </mat-card-content>
         
             <mat-card-content>
-                <a [routerLink]="'/admin/instructions/'+p.id" class="btn btn-dark btn-sm">Voir le contenu </a>
-                <button
-                    [routerLink]="'/admin/view-comment/' + p.id + '/' + p.title" 
-                    mat-flat-button
-                    class="ml-5"
-                >
-                    Commentaires
-        
-                    
-                </button>
+                <button [routerLink]="'/admin/instructions/'+p.id" class="btn btn-dark mx-4">Voir le contenu </button>
                 <button
                     [routerLink]="'/admin/publication/' + p.id" 
                     mat-flat-button 
-                    color="accent" 
-                    class="m-5"
+                    
+                    class="mx-4 btn btn-warning"
                 >
                     Mettre à jour
                 </button>
                 <button 
                     mat-flat-button 
                     color="warn" 
-                    class="ml-5"
+                    class="mx-4"
                     (click)="deletePublication(p.id)"
                 >
                     Supprimer
